@@ -43,6 +43,7 @@ print(result)
 
 import re
 
+
 string = "ABCDCDC"
 substring = "CDC"
 result = len(re.findall(f"(?={substring})", string))
