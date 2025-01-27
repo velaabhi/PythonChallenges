@@ -45,18 +45,10 @@ Sample Output
    17    21    11 10001
 '''
 
-n = int(input("Enter a no"))
-
-Dec = n
-Oct = oct(n)
-Hex = hex(n)
-Bin = bin(n)
-
-for i in range (1,n+1):
-
-    dec = i
-    oct_no_pre = format(i,'o')
-    hex_no_pre = format(i,'X')
-    bin_no_pre = format(i,'b')
-
-    print(f"{dec:>5} {oct_no_pre:>5} {hex_no_pre:>5} {bin_no_pre:>5}")
+number = int(input("Enter a no"))
+number_width = len(bin(number)[2:])
+values_type = ['d', 'o', 'X', 'b']
+for i in range(1, number + 1):
+    for v in values_type:
+        print(f"{i: >{number_width}{v}}", end=' ')
+    print()
